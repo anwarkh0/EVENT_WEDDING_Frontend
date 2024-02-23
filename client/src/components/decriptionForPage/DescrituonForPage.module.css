@@ -1,0 +1,25 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 300px;
+  overflow: hidden;
+
+}
+.h1 {
+  color: #a2783a;
+  font-family: "Alex Brush", cursive;
+  font-weight: normal;
+  font-size: 2.2rem;
+  margin-top: 0px;
+}
+.p {
+  text-align: center;
+  font-size: 25px;
+  font-family: Nunito Sans;
+}
+.img{
+    max-width:  50%;
+    height: 450px;
+    border-radius: 500px 500px 0 0;
+}

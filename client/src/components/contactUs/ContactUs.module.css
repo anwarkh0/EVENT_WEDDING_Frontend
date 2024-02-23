@@ -1,0 +1,73 @@
+.section {
+  padding: 0px 300px 70px 300px;
+}
+.form {
+  display: flex;
+  flex-direction: row;
+  row-gap: 17px;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 20px;
+  height: fit-content;
+}
+.h1 {
+  width: 80%;
+  padding: 20px;
+  margin-bottom: 0;
+}
+.form > div > label {
+  color: #a2783a;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+}
+.form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 45%;
+}
+.form > div > input,
+.form > div > select,
+.form > div > textarea {
+  color: #a2783a;
+  background: transparent;
+  border: 1px solid #a2783a;
+  outline: none;
+  height: 3rem;
+  padding-left: 1rem;
+  font-size: 1.3rem;
+  border-radius: 5px;
+}
+.form > div > select {
+  height: 53px;
+}
+
+.fieldDesc {
+  width: 100% !important;
+}
+.form > div > textarea {
+  height: 150px;
+  resize: none;
+}
+.button {
+  text-decoration: none;
+  color: white;
+  background: black;
+  width: 180px;
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  font-family: Cormorant Garamond;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+}
+.btn {
+  display: flex;
+  width: 100% !important;
+
+  align-items: flex-end;
+}

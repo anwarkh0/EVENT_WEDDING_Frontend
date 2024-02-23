@@ -1,11 +1,74 @@
 footer {
-    background-color: #161616;
-    color: #AAAAAA;
-    height: 74px;
-    display: flex;
-    flex-shrink: 0;
-    justify-content: center;
-    align-items: center;
-    margin-top: auto;
-    font-weight: 500;
+  background-color: black;
+  color: white;
+  height: 40vh;
+  display: flex;
+  padding-inline: 70px;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+.div1 {
+  width: 35%;
+}
+.title {
+  font-family: Alex Brush;
+  width: fit-content;
+}
+.p {
+  font-size: 1.2rem;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  line-height: 1.9em;
+  width: 80%;
+}
+.icon {
+  display: flex;
+  gap: 20px;
+}
+.ul {
+  width: 20%;
+  margin: 0;
+}
+.ul,
+.h2 {
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+.ul > li {
+  list-style: none;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+}
+.ul > li > a {
+  text-decoration: none;
+  color: white;
+}
+.contactUS {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+.contactUS > span {
+  font-size: 1.2rem;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  line-height: 1.9em; /* Adjust the value as needed */
+}
+.photography {
+  width: 20%;
+  /* background-color: red; */
+}
+.photo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) auto; /* Three columns with equal width and an auto-sized column */
+  gap: 20px; /* Adjust the gap between items */
+  width: 50%;
+}
+
+.image {
+  width: 104px;
+  height: 120px;
 }

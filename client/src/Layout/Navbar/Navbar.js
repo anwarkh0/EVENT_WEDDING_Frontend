@@ -2,16 +2,17 @@ import React from 'react'
 import Facebook from '../../assets/svgComponent/Facebook'
 import Instagram from '../../assets/svgComponent/Instagram'
 import Style from './Navbar.module.css'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 function Navbar() {
     const activeStyles = {
-        borderBottom: "#fff7ea 2px groove",
-        color: "#fff7ea",
+        borderBottom: "#5f3901 2px groove",
+        color: "#5f3901",
     }
+    
     return (
         <nav className={Style.nav}>
             <div className={Style.logo}>
-                <h2>Events and Weddings</h2>
+                <h2><Link to='/'>Events and Weddings</Link></h2>
             </div>
             <ul className={Style.ul}>
                 <li>
@@ -28,6 +29,14 @@ function Navbar() {
                         style={({ isActive }) => isActive ? activeStyles : null}
                     >
                         Services
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        to='/plan-tour-event'
+                        style={({ isActive }) => isActive ? activeStyles : null}
+                    >
+                        Plan Your Event
                     </NavLink>
                 </li>
                 <li>
