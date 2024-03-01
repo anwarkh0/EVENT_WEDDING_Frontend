@@ -1,55 +1,24 @@
 import { motion } from 'framer-motion';
+import loder from '../../assets//gif/loder.gif'
 import Style from './Event.module.css'
 import { Link } from 'react-router-dom'
-function Event({ image, title, nameEvent, btn }) {
-
+function Event({ description, image, name, isLoading, id }) {
+    if (isLoading) {
+        return <div className={Style.loder}>{loder}</div>;
+    }
     return (
         <section className={Style.section}>
-            <div  className={Style.titleLink}>
-
-                <h1 className={Style.h1}
-                    initial={{ y: '200', opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ type: 'tween', stiffness: 120, duration: 1, ease: 'easeInOut' }}
-                >{title}</h1>
-
-            </div>
-
-            <div >
-                {<div className={Style.threeEvent}
-                    initial={{ y: '100', opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ type: 'tween', stiffness: 120, duration: 1, ease: 'easeInOut' }}
-                >
-                    <Link to="/event-packages" className={Style.rachwan}
-                        style={{ backgroundImage: `url(${image})` }}>
+            <div>
+                <div className={Style.threeEvent} >
+                    <Link to={`/events/${id}`} className={Style.rachwan}
+                        style={{ backgroundImage: `url(${process.env.REACT_APP_ENDPOINT}${image})` }}
+                    >
                         <div className={Style.infoEvent}>
-                            <h1 className={Style.nameEvent}>{nameEvent}</h1>
-                        </div>
-                    </Link>
-                    <Link to="/event-packages" className={Style.rachwan}
-                        style={{ backgroundImage: `url(${image})` }}>
-                        <div className={Style.infoEvent}>
-                            <h1 className={Style.nameEvent}>{nameEvent}</h1>
-                        </div>
-                    </Link>
-                    <Link to="/event-packages" className={Style.rachwan}
-                        style={{ backgroundImage: `url(${image})` }}>
-                        <div className={Style.infoEvent}>
-                            <h1 className={Style.nameEvent}>{nameEvent}</h1>
+                            <h1 className={Style.nameEvent}>{name}</h1>
+                            <p className={Style.p}>{description}</p>
                         </div>
                     </Link>
                 </div>
-                }
-
-                {btn &&
-                    <div className={Style.link}
-                        initial={{ y: '100', opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
-                        transition={{ type: 'tween', stiffness: 120, duration: 1, ease: 'easeInOut' }}
-                    >
-                        <Link to="/service">See More</Link>
-                    </div>}
             </div>
         </section>
     )

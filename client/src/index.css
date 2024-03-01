@@ -7,17 +7,17 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fff7ea;
+    background-color: #fdfaf8;
 }
 h1 {
-  color: #a2783a;
+  color: #1a1a1a;
   font-family: sans-serif;
   font-size: 40px;
   font-weight: 300;
   letter-spacing: 5px;
 }
 h3 {
-  color: #a2783a;
+  color: #1a1a1a;
   font-family: sans-serif;
   font-size: 25px;
   font-weight: 200;

@@ -1,146 +1,192 @@
-import React from 'react'
-import Style from './OurPackages.module.css'
-import { motion } from 'framer-motion';
-
-import image from '../../assets/wedding/pexels-pixabay-265722.jpg'
+import React from "react";
+import Style from "./OurPackages.module.css";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import axios from "axios";
+import { motion } from "framer-motion";
 function OurPackages() {
-    return (
-        <section className={Style.section}>
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    bookingDate: "",
+    budget: "",
+    packageName: "",
+  });
 
-            <h1
-                initial={{ y: '100', opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ type: 'tween', stiffness: 120, duration: 1, ease: 'easeInOut' }}
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
-            >OUR BSET PACKAGES FOR WEDDING</h1>
-            <article className={Style.article}
-                initial={{ y: '100', opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ type: 'tween', stiffness: 120, duration: 1, ease: 'easeInOut' }}
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData);
+  };
+  const { id } = useParams();
+  const [data, setData] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          `${process.env.REACT_APP_ENDPOINT}event/get-one-event/${id}`
+        );
 
-            >
-                <img src={image} className={Style.img}
-                    initial={{ y: '100', opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ type: 'tween', stiffness: 120, duration: 1, ease: 'easeInOut' }}
+        setData(response.data.event);
+        setIsLoading(false);
+      } catch (error) {
+        console.error("Error fetching package data:", error);
+      }
+    };
 
+    fetchData();
+  }, [id]);
+  console.log("das", data);
+  return (
+    <section className={Style.section}>
+      <h1>Our Most Popular {data&&data.name} Packages</h1>
+      {data&&data.packageId &&
+        data.packageId.map((item) => (
+          <article className={Style.article} key={item._id}>
+            <img
+              src={`${process.env.REACT_APP_ENDPOINT}${item.image}`}
+              className={Style.img}
+            />
+            <aside className={Style.aside}>
+              <p className={Style.p}>{item.description}</p>
+              <h3 className={Style.h3}>Package Includes</h3>
+              <ol className={Style.ol}>
+                {item.servicesId.map((items, key) => {
+                  return (
+                    <li key={key}>{items.name}</li>
+                  )
+                }
+                )}
+              </ol>
+              <button
+                type="submit"
+                className={Style.button}
+                onClick={() => {
+                  setIsOpen(true);
+                }}
+              >
+                Book Now
+              </button>
+            </aside>
+          </article >
+        ))
+      }
+
+      {
+        isOpen && (
+          <motion.div
+            className={Style.background}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <form className={Style.form} onSubmit={handleSubmit}>
+              <span
+                className={Style.span}
+                onClick={() => {
+                  setIsOpen(false);
+                }}
+              >
+                <p className={Style.form_Title}>
+                  Book Package
+                </p>
+                <button className={Style.xbtn} onClick={() => setIsOpen(false)}>
+                  X
+                </button>
+              </span>
+              <div>
+                <label htmlFor="fullName">Full Name:</label>
+                <input
+                  type="text"
+                  id="fullName"
+                  name="fullName"
+                  value={formData.fullName}
+                  onChange={handleChange}
+                  required
                 />
-                <aside className={Style.aside}
-                    initial={{ y: '100', opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ type: 'tween', stiffness: 120, duration: 1, ease: 'easeInOut' }}
-
+              </div>
+              <div>
+                <label htmlFor="email">Email:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="phone">Phone:</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="bookingDate">Booking Date:</label>
+                <input
+                  type="date"
+                  id="bookingDate"
+                  name="bookingDate"
+                  value={formData.bookingDate}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="budget">Budget:</label>
+                <input
+                  type="text"
+                  id="budget"
+                  name="budget"
+                  value={formData.budget}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="packageName">Package:</label>
+                <input
+                  type="text"
+                  id="package"
+                  name="packageName"
+                  value={formData.packageName}
+                  onChange={handleChange}
+                  required
+                  disabled
+                />
+              </div>
+              <div className={Style.bookingDate}>
+                <button
+                  onClick={() => {
+                    setIsOpen(false);
+                  }}
+                  type="submit"
+                  className={Style.button}
                 >
-                    <p className={Style.p}
-                        initial={{ y: '100', opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
-                        transition={{ type: 'tween', stiffness: 120, duration: 1, ease: 'easeInOut' }}
-
-                    >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                        , sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                        qui officia deserunt mollit anim id est laborum.
-                    </p>
-                    <h3 className={Style.h3}
-                        initial={{ y: '100', opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
-                        transition={{ type: 'tween', stiffness: 120, duration: 1, ease: 'easeInOut' }}
-
-                    >Package Includes</h3>
-                    <ol className={Style.ol}
-                        initial={{ y: '100', opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
-                        transition={{ type: 'tween', stiffness: 120, duration: 1, ease: 'easeInOut' }}
-
-                    >
-                        <li
-                            initial={{ y: '100', opacity: 0 }}
-                            whileInView={{ y: 0, opacity: 1 }}
-                            transition={{ type: 'tween', stiffness: 120, duration: 1, ease: 'easeInOut' }}
-
-                        >PWE Weddings & Events Workbook</li>
-                        <li
-                            initial={{ y: '100', opacity: 0 }}
-                            whileInView={{ y: 0, opacity: 1 }}
-                            transition={{ type: 'tween', stiffness: 120, duration: 1, ease: 'easeInOut' }}
-
-                        >Unlimited access to expert wedding advice (via e-mail)</li>
-                        <li
-                            initial={{ y: '100', opacity: 0 }}
-                            whileInView={{ y: 0, opacity: 1 }}
-                            transition={{ type: 'tween', stiffness: 120, duration: 1, ease: 'easeInOut' }}
-
-                        >Access to Preferred Vendors List</li>
-                        <li
-                            initial={{ y: '100', opacity: 0 }}
-                            whileInView={{ y: 0, opacity: 1 }}
-                            transition={{ type: 'tween', stiffness: 120, duration: 1, ease: 'easeInOut' }}
-
-                        >Wedding Assistant for wedding day</li>
-                        <li
-                            initial={{ y: '100', opacity: 0 }}
-                            whileInView={{ y: 0, opacity: 1 }}
-                            transition={{ type: 'tween', stiffness: 120, duration: 1, ease: 'easeInOut' }}
-
-                        >Oversee and help with ceremony/reception site set up & tear down</li>
-                        <li
-                            initial={{ y: '100', opacity: 0 }}
-                            whileInView={{ y: 0, opacity: 1 }}
-                            transition={{ type: 'tween', stiffness: 120, duration: 1, ease: 'easeInOut' }}
-
-                        >Review of Vendor contracts</li>
-                        <li
-                            initial={{ y: '100', opacity: 0 }}
-                            whileInView={{ y: 0, opacity: 1 }}
-                            transition={{ type: 'tween', stiffness: 120, duration: 1, ease: 'easeInOut' }}
-
-                        >Distribute final payments and gratuities to vendors as necessary</li>
-                    </ol>
-                    <button type="submit" className={Style.button}
-                        initial={{ y: '100', opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
-                        transition={{ type: 'tween', stiffness: 120, duration: 1, ease: 'easeInOut' }}
-
-                    >Book Now</button>
-                </aside>
-
-            </article>
-
-            <article className={Style.isRiverce}>
-                <img src={image} className={Style.img} />
-                <aside className={Style.aside}>
-                    <p className={Style.p}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                        , sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                        qui officia deserunt mollit anim id est laborum.
-                    </p>
-                    <h3 className={Style.h3}>Package Includes</h3>
-                    <ol className={Style.ol}>
-                        <li>PWE Weddings & Events Workbook</li>
-                        <li>Unlimited access to expert wedding advice (via e-mail)</li>
-                        <li>Access to Preferred Vendors List</li>
-                        <li>Wedding Assistant for wedding day</li>
-                        <li>Oversee and help with ceremony/reception site set up & tear down</li>
-                        <li>Review of Vendor contracts</li>
-                        <li>Distribute final payments and gratuities to vendors as necessary</li>
-                    </ol>
-                    <button type="submit" className={Style.button} >Book Now</button>
-
-                </aside>
-
-            </article>
-        </section>
-    )
+                  Sent
+                </button>
+              </div>
+            </form>
+          </motion.div>
+        )
+      }
+      <h1></h1>
+    </section >
+  );
 }
 
-export default OurPackages
+export default OurPackages;

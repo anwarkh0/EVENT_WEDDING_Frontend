@@ -4,22 +4,130 @@
   align-items: center;
   margin: 0px 300px;
   overflow: hidden;
-
+  color: #1a1a1a;
+  margin-block: 100px;
 }
 .h1 {
-  color: #a2783a;
-  font-family: "Alex Brush", cursive;
-  font-weight: normal;
-  font-size: 2.2rem;
+  color: #1a1a1a;
+  font-family: Cormorant Garamond;
+  font-weight: 500;
+  font-size: 2.3rem;
   margin-top: 0px;
 }
 .p {
-  text-align: center;
   font-size: 25px;
   font-family: Nunito Sans;
 }
+.img {
+  max-width: 50%;
+  height: 450px;
+  border-radius: 500px 500px 0 0;
+}
+.section>:last-child{
+  display: flex;
+  justify-content: center;}
+
+@media (max-width: 1369px) {
+  .h1 {
+    font-size: 2rem;
+  }
+  .p {
+    font-size: 22px;
+  }
+ 
+  .section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 300px;
+    overflow: hidden;
+    color: #1a1a1a;
+    margin-block: 100px;
+  }
+}
+@media (max-width: 1293px) {
+
+  .section {
+    margin: 0px 250px;
+  margin-block: 100px;
+
+  }
+}
+@media (max-width: 1193px) {
+
+  .section {
+    margin: 0px 200px;
+  margin-block: 100px;
+
+  }
+}
+@media (max-width: 1092px) {
+
+  .section {
+    margin: 0px 150px;
+  margin-block: 100px;
+
+  }
+}
+@media (max-width: 993px) {
+
+  .section {
+    margin: 0px 100px;
+  margin-block: 100px;
+
+  }
+}
+@media (max-width: 892px) {
+
+  .h1 {
+    font-size: 2rem;
+    width: 60%;
+  }
+}
+@media (max-width: 808px) {
+
+  .h1 {
+    font-size: 2rem;
+    width: 80%;
+  }
+}
+
+@media (max-width: 740px) {
 .img{
-    max-width:  50%;
-    height: 450px;
-    border-radius: 500px 500px 0 0;
+  max-width:  55%;
+}
+}
+@media (max-width: 655px) {
+  .section {
+    margin: 0px 50px;
+  margin-block: 100px;
+
+  }
+  .img{
+    max-width:  60%;
+  }
+ 
+}
+@media (max-width: 625px) {
+  .h1 {
+    font-size: 1.7rem;
+    width: 100%;
+  }
+
+  .p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 550px) {
+
+  .img{
+    max-width:  100%;
+  }
+  .section {
+
+    margin: 0px 30px;
+ 
+    margin-block: 100px;
+  }
 }

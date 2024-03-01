@@ -1,5 +1,5 @@
 .section {
-  padding: 50px 300px 70px 300px;
+  padding: 0 300px;
   height: 100vh;
   display: flex;
   background-repeat: no-repeat;
@@ -19,18 +19,19 @@
   width: 100%;
   justify-content: space-between;
   align-items: flex-end;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(12, 46, 43, 0.9);
   padding: 50px;
   height: fit-content;
 }
 .h1 {
-  background: rgba(0, 0, 0, 0.9);
+  color: #fdfaf8;
+  background: rgba(12, 46, 43, 0.9);
   width: 100%;
   padding: 50px;
   margin-bottom: 0;
 }
 .form > div > label {
-  color: #a2783a;
+  color: #fdfaf8;
   font-size: 1.2rem;
   font-family: sans-serif;
 }
@@ -45,16 +46,17 @@
 .form > div > textarea {
   color: #ffffff;
   background: transparent;
-  border: 1px solid #a2783a;
+  border: 1px solid #fdfaf8;
   outline: none;
   height: 3rem;
   padding-left: 1rem;
   font-size: 1.3rem;
   border-radius: 5px;
-  box-shadow: 0 1px 2px #fff7ea;
+  box-shadow: 0 1px 2px #fdfaf8;
 }
 .form > div > select {
   height: 53px;
+  padding-left: 10px;
 }
 
 .fieldDesc {
@@ -68,8 +70,8 @@
 
 .button {
   text-decoration: none;
-  color: white;
-  background: black;
+  color: #0c2e2b;
+  background: #fdfaf8;
   width: 180px;
   display: flex;
   height: 50px;
@@ -79,10 +81,18 @@
   font-size: 1.5rem;
   cursor: pointer;
   border: none;
-  box-shadow: 0 1px 2px #fff7ea;
+  transition: 0.5s ease-in-out;
+}
+.button:hover {
+  background: #f5e8e0;
+  color: #0c2e2b;
 }
 .btn {
   display: flex;
   width: 100% !important;
   align-items: flex-end;
+}
+.eventName {
+  color: #fdfaf8;
+  background-color: rgba(12, 46, 43, 0.9);
 }

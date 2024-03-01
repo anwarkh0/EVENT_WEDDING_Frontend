@@ -1,35 +1,11 @@
 .section {
-  margin: 50px 300px;
-  height: 82.4vh;
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
   overflow: hidden;
-}
-.link {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 20px;
-}
-.link > a {
-  text-decoration: none;
-  color: white;
-  background: black;
-  width: 180px;
-  display: flex;
-  height: 50px;
-  align-items: center;
-  justify-content: center;
-  font-family: Cormorant Garamond;
-  font-size: 1.5rem;
+  margin-bottom: 15px;
 }
 
-.titleLink {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 .threeEvent {
   display: flex;
   justify-content: space-between;
@@ -44,33 +20,45 @@
   position: relative;
   overflow: hidden;
   background-position: center;
-  cursor:pointer ;
+  cursor: pointer;
 }
 
 .infoEvent {
   border-radius: 500px 500px 0 0;
-
   display: flex;
-  color: white;
+  color: #fdfaf8;
   position: absolute;
   bottom: -450px;
-
   height: 100%;
   width: 100%;
   left: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(12, 46, 43, .7);
   transition: all 0.5s ease-in-out;
-  align-items: flex-end;
+  align-items: center;
+  flex-direction: column;
   justify-content: center;
 }
 .nameEvent {
-  color: white;
-  font-family: "Alex Brush", cursive;
-  font-weight: normal;
+  color: #fdfaf8;
+  font-family: Cormorant Garamond;
+  font-weight: 400;
   font-size: 1.9rem;
   margin: 0;
 }
 .rachwan:hover > .infoEvent {
   bottom: 0px;
-  padding-bottom: 50px;
+}
+.loder {
+  margin: 50px 300px;
+  height: fit-content;
+}
+.p {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-inline: 20px;
+  height: 386px;
+  display: flex;
+  align-items: center;
+  color: #fdfaf8;
+
 }

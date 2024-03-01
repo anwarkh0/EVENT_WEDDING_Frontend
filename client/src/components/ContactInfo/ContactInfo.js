@@ -1,12 +1,8 @@
-import { motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 import Style from './ContactInfo.module.css'
 function ContactInfo() {
   return (
     <section className={Style.section}
-    initial={{ y: '100', opacity: 0 }}
-    whileInView={{ y: 0, opacity: 1 }}
-    transition={{ type: 'tween', stiffness: 120, duration: 1, ease: 'easeInOut' }}
-
     >
       <h1>LOCATION</h1>
       <div className={Style.container}>

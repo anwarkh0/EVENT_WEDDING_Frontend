@@ -5,15 +5,15 @@
   flex-direction: column;
   row-gap: 1rem;
 }
-.link {
+/* .link {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-}
-.link > a {
+} */
+/* .link > a {
   text-decoration: none;
-  color: white;
-  background: black;
+  color: #fdfaf8;
+  background: #1a1a1a;
   width: 180px;
   display: flex;
   height: 50px;
@@ -21,13 +21,13 @@
   justify-content: center;
   font-family: Cormorant Garamond;
   font-size: 1.5rem;
-}
+} */
 
-.titleLink {
+/* .titleLink {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
+} */
 .threeEvent {
   display: flex;
   justify-content: space-between;
@@ -35,10 +35,10 @@
 
 .rachwan {
   width: 400px;
-  height: 600px;
+  height: 400px;
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 500px 500px 0 0;
+  border-radius: 500px 500px 500px 500px;
   position: relative;
   overflow: hidden;
   background-position: center;
@@ -47,7 +47,6 @@
 .infoEvent {
   border-radius: 500px 500px 0 0;
   display: flex;
-  color: white;
   position: absolute;
   bottom: -450px;
   height: 100%;
@@ -59,9 +58,9 @@
   justify-content: center;
 }
 .nameEvent {
-  color: white;
-  font-family: "Alex Brush", cursive;
-  font-weight: normal;
+  color: #fdfaf8;
+  font-family: Cormorant Garamond;
+  font-weight: 400;
   font-size: 1.9rem;
   margin: 0;
 }

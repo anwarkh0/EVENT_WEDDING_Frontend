@@ -1,5 +1,6 @@
 .section {
   padding: 0px 300px 70px 300px;
+  color:#1a1a1a;
 }
 .form {
   display: flex;
@@ -18,7 +19,6 @@
   margin-bottom: 0;
 }
 .form > div > label {
-  color: #a2783a;
   font-size: 1.2rem;
   font-family: sans-serif;
 }
@@ -31,9 +31,9 @@
 .form > div > input,
 .form > div > select,
 .form > div > textarea {
-  color: #a2783a;
+  color: #1a1a1a;
   background: transparent;
-  border: 1px solid #a2783a;
+  border: 1px solid #0c2e2b;
   outline: none;
   height: 3rem;
   padding-left: 1rem;
@@ -53,8 +53,8 @@
 }
 .button {
   text-decoration: none;
-  color: white;
-  background: black;
+  color: #fdfaf8;
+  background:#0c2e2b; 
   width: 180px;
   display: flex;
   height: 50px;
@@ -64,6 +64,11 @@
   font-size: 1.5rem;
   cursor: pointer;
   border: none;
+  transition: 0.5s ease-in-out;
+}
+.button:hover{
+  background:  #1a1a1a ;
+  color: #fdfaf8;
 }
 .btn {
   display: flex;

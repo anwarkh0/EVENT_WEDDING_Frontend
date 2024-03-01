@@ -27,12 +27,7 @@ function HeroSection({ image, title }) {
 
 
   return (
-    <main className={Style.main}
-      initial={{ y: 0, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ type: 'tween', stiffness: 120, duration: 1, ease: 'easeInOut' }}
-
-    >
+    <main className={Style.main}>
       <img src={image} alt='heroImage' className={Style.image} />
         <h1 className={Style.h1} ref={typedRef} />
       <div className={Style.empty}>

@@ -14,11 +14,12 @@ function Contact() {
       />
       <DescrituonForPage
 
-        title="We look forward to hearing from you."
-        paragrapg1="Contact us for any enquire or to request a quote, and we’ll
-        arrange each of your culinary wishes, recording your specific needs
-         with creativity and professionalism."
-        paragrapg2=""
+        title="Ready to turn your vision into reality? "
+        paragrapg1=" Contact us today to discuss your event
+         needs and let us create an unforgettable experience
+          together."
+        paragrapg2="Welcome to Oskwood Events & Catering, where every event is a masterpiece.
+        "
         image=""
       />
       <div className={Style.div}>

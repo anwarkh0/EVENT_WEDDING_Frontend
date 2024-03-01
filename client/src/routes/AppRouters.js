@@ -16,7 +16,7 @@ const AppRoutes = () => {
                 <Route index element={<Home />} />
                 <Route path="about" element={<About />} />
                 <Route path="service" element={<Service/>} />
-                <Route path="event-packages" element={<OurPackagesPage />} />
+                <Route path="events/:id" element={<OurPackagesPage />} />
                 <Route path="contact" element={<Contact />} />
                 <Route path="plan-tour-event" element={<PlanYourEvent />} />
             </Route>

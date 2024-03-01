@@ -1,5 +1,5 @@
 import Style from './MultiSelectList.module.css'
-function MultiSelectList({ setSelectedServices, selectedServices }) {
+function MultiSelectList({ setSelectedServices, selectedServices, services }) {
 
     const handleOptionChange = (option) => {
         const currentIndex = selectedServices.indexOf(option);
@@ -20,36 +20,27 @@ function MultiSelectList({ setSelectedServices, selectedServices }) {
 
                 <h3>Choose Your Services:</h3>
                 <ul>
-                    <li>
-                        <input
-                            type="checkbox"
-                            id="music"
-                            value="music"
-                            checked={selectedServices.includes('music')}
-                            onChange={() => handleOptionChange('music')}
-                        />
-                        <label htmlFor="music">music</label>
-                    </li>
-                    <li>
-                        <input
-                            type="checkbox"
-                            id="decoration"
-                            value="decoration"
-                            checked={selectedServices.includes('decoration')}
-                            onChange={() => handleOptionChange('decoration')}
-                        />
-                        <label htmlFor="decoration">decoration</label>
-                    </li>
-                    
-                    {/* Add more list items for other options */}
+                    {services && services.map((service) => (
+                        <li>
+                            <input
+                                key={service._id}
+                                type="checkbox"
+                                id={service._id}
+                                value={service.name}
+                                checked={selectedServices.includes(`${service.name}`)}
+                                onChange={() => handleOptionChange(`${service.name}`)}
+                            />
+                            <label htmlFor={`${service.name}`}>{`${service.name}`}</label>
+                        </li>
+                    ))}
                 </ul>
             </div>
-            <div>
+            <div className={Style.selectedServices}>
                 <h3>Selected Services:</h3>
 
                 <ul>
                     {selectedServices.map((option, index) => (
-                        <li key={index}>{index+1} {option}</li>
+                        <li key={index}>{index + 1} {option}</li>
                     ))}
                 </ul>
             </div>

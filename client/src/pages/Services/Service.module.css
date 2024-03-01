@@ -1,0 +1,8 @@
+.section {
+    margin: 50px 300px;
+  }
+  .div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
