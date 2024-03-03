@@ -39,100 +39,101 @@ function EventBookingForm() {
         setFormData((prevData) => ({
             ...prevData,
             [name]: value.split(" ")[1]
-        }))};
-         const handleFormDataChange = (e) => {
-            const { name, value } = e.target;
-            console.log("name", name)
-            setFormData((prevData) => ({
-                ...prevData,
-                [name]: value
-            }))};
+        }))
+    };
+    const handleFormDataChange = (e) => {
+        const { name, value } = e.target;
+        console.log("name", name)
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value
+        }))
+    };
 
-        
-       
 
 
-        const resetForm = () => {
-            setFormData({
-                name: '',
-                email: '',
-                phone: '',
-                eventType: '',
-                services: [],
-                description: ''
-            })
-        }
-        console.log("dada", data)
-console.log("SELECTED",)
-        const handleSubmit = (e) => {
-            e.preventDefault();
-            console.log("Form submitted:", formData);
-        }
-        return (
-            <section className={Style.section}
-                style={{ backgroundImage: `url(${eventImage})` }}>
 
-                <h1 className={Style.h1}>Event Booking Form</h1>
-                <form onSubmit={handleSubmit} className={Style.form}>
 
-                    <div>
-                        <label htmlFor="name">Name:</label>
-                        <input type="text" id="name" name="name" value={formData.name} onChange={handleFormDataChange} required />
-                    </div>
-
-                    <div>
-                        <label htmlFor="email">Email:</label>
-                        <input type="email" id="email" name="email" value={formData.email} onChange={handleFormDataChange} required />
-                    </div>
-
-                    <div>
-                        <label htmlFor="phone">Phone:</label>
-                        <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleFormDataChange} required />
-                    </div>
-                    <div>
-
-                        <label htmlFor="eventType">Event Type:</label>
-                        <select
-                            id="eventType"
-                            name="eventType"
-                            onChange={handleChange}
-                            disabled={!data || data.length === 0}
-                            required
-                        >
-                            <option value="" disabled selected>Please select your event</option>
-                            {data &&
-                                data.map((event, index) => (
-                                    <option
-                                        key={event._id}
-                                        id={index}
-                                        value={index + " " + event.name}
-                                        className={Style.eventName}
-                                    >
-                                        {event.name}
-                                    </option>
-                                ))}
-                        </select>
-                    </div>
-                    {
-
-                        <MultiSelectList
-                            services={services}
-                            setSelectedServices={setSelectedServices}
-                            selectedServices={selectedServices}
-                        />
-                    }
-                    <div className={Style.fieldDesc}>
-
-                        <label htmlFor="description">Description:</label>
-                        <textarea id="description" name="description" value={formData.description} onChange={handleFormDataChange} rows="4" required></textarea>
-                    </div>
-                    <div className={Style.btn}>
-
-                        <button type="submit" className={Style.button} /* onClick={handleSubmit} */>Send</button>
-                    </div>
-                </form>
-            </section>
-        );
+    const resetForm = () => {
+        setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            eventType: '',
+            services: [],
+            description: ''
+        })
     }
+    console.log("dada", data)
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log("Form submitted:", formData);
+    }
+    return (
+        <section className={Style.section}
+            style={{ backgroundImage: `url(${eventImage})` }}>
 
-    export default EventBookingForm;
+            <h1 className={Style.h1}>Event Booking Form</h1>
+            <form onSubmit={handleSubmit} className={Style.form}>
+
+                <div>
+                    <label htmlFor="name">Name:</label>
+                    <input type="text" id="name" name="name" value={formData.name} onChange={handleFormDataChange} required />
+                </div>
+
+                <div>
+                    <label htmlFor="email">Email:</label>
+                    <input type="email" id="email" name="email" value={formData.email} onChange={handleFormDataChange} required />
+                </div>
+
+                <div>
+                    <label htmlFor="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleFormDataChange} required />
+                </div>
+                <div>
+
+                    <label htmlFor="eventType">Event Type:</label>
+                    <select
+                        id="eventType"
+                        name="eventType"
+                        onChange={handleChange}
+                        disabled={!data || data.length === 0}
+                        required
+                    >
+                        <option value="" disabled selected>Please select your event</option>
+                        {data &&
+                            data.map((event, index) => (
+                                <option
+                                    key={event._id}
+                                    id={index}
+                                    value={index + " " + event.name}
+                                    className={Style.eventName}
+                                >
+                                    {event.name}
+                                </option>
+                            ))}
+                    </select>
+                </div>
+                {
+
+                    <MultiSelectList
+                        services={services}
+                        setSelectedServices={setSelectedServices}
+                        selectedServices={selectedServices}
+                    />
+                }
+                <div className={Style.fieldDesc}>
+
+                    <label htmlFor="description">Description:</label>
+                    <textarea id="description" name="description" value={formData.description} onChange={handleFormDataChange} rows="4" required></textarea>
+                </div>
+                <div className={Style.btn}>
+
+                    <button type="submit" className={Style.button} /* onClick={handleSubmit} */>Send</button>
+                </div>
+            </form>
+        </section>
+    );
+}
+
+export default EventBookingForm;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Facebook from '../../assets/svgComponent/Facebook'
 import Instagram from '../../assets/svgComponent/Instagram'
 import Style from './Navbar.module.css'
@@ -9,11 +9,11 @@ function Navbar() {
         borderBottom: "#f5e8e0 2px groove",
         color: "#f5e8e0",
     }
-    
+
     return (
-        <nav className={Style.nav}>
+        <nav id='navbar' className={Style.nav}>
             <div className={Style.logo}>
-                <h2><Link to='/'><img src={logo} alt=''/></Link></h2>
+                <h2><Link to='/'><img src={logo} alt='' /></Link></h2>
             </div>
             <ul className={Style.ul}>
                 <li>

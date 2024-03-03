@@ -19,7 +19,7 @@ function MultiSelectList({ setSelectedServices, selectedServices, services }) {
             <div>
 
                 <h3>Choose Your Services:</h3>
-                <ul>
+                <ol>
                     {services && services.map((service) => (
                         <li>
                             <input
@@ -33,16 +33,16 @@ function MultiSelectList({ setSelectedServices, selectedServices, services }) {
                             <label htmlFor={`${service.name}`}>{`${service.name}`}</label>
                         </li>
                     ))}
-                </ul>
+                </ol>
             </div>
             <div className={Style.selectedServices}>
                 <h3>Selected Services:</h3>
 
-                <ul>
+                <ol>
                     {selectedServices.map((option, index) => (
-                        <li key={index}>{index + 1} {option}</li>
+                        <li key={index}>&nbsp;&nbsp;- {option}</li>
                     ))}
-                </ul>
+                </ol>
             </div>
         </div>
     );

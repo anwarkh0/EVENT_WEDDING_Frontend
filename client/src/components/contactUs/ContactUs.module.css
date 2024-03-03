@@ -1,6 +1,6 @@
 .section {
   padding: 0px 300px 70px 300px;
-  color:#1a1a1a;
+  color: #1a1a1a;
 }
 .form {
   display: flex;
@@ -10,12 +10,12 @@
   width: 100%;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 20px;
+  padding-top: 20px;
   height: fit-content;
 }
 .h1 {
   width: 80%;
-  padding: 20px;
+  /* padding: 20px; */
   margin-bottom: 0;
 }
 .form > div > label {
@@ -54,7 +54,7 @@
 .button {
   text-decoration: none;
   color: #fdfaf8;
-  background:#0c2e2b; 
+  background: #0c2e2b;
   width: 180px;
   display: flex;
   height: 50px;
@@ -66,8 +66,8 @@
   border: none;
   transition: 0.5s ease-in-out;
 }
-.button:hover{
-  background:  #1a1a1a ;
+.button:hover {
+  background: #1a1a1a;
   color: #fdfaf8;
 }
 .btn {
@@ -75,4 +75,80 @@
   width: 100% !important;
 
   align-items: flex-end;
+}
+
+@media (max-width: 1369px) {
+  .h1 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 1293px) {
+  .section {
+    padding: 0px 250px;
+  }
+}
+@media (max-width: 1193px) {
+  .section {
+    padding: 0px 200px;
+  }
+}
+@media (max-width: 1092px) {
+  .section {
+    padding: 0px 150px;
+  }
+}
+@media (max-width: 993px) {
+  .section {
+    padding: 0px 100px;
+  }
+}
+@media (max-width: 892px) {
+  .h1 {
+    font-size: 2rem;
+    width: 60%;
+  }
+}
+@media (max-width: 808px) {
+  .h1 {
+    font-size: 2rem;
+    width: 80%;
+  }
+}
+
+@media (max-width: 655px) {
+  .section {
+    padding: 0px 50px;
+  }
+}
+@media (max-width: 625px) {
+  .h1 {
+    font-size: 1.7rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 550px) {
+  .section {
+    padding: 0px 30px;
+  }
+}
+@media (max-width: 450px) {
+  .form > div > input,
+  .form > div > select,
+  .form > div > textarea {
+    height: 2.5rem;
+  }
+  .form > div > textarea {
+    height: 100px;
+    resize: none;
+  }
+  .button {
+    width: 160px;
+    height: 45px;
+    font-size: 1.4rem;
+
+  }
+  .btn{
+    align-items: center;
+  }
 }

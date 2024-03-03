@@ -1,5 +1,5 @@
 .section {
-  padding: 0 300px;
+  padding: 50px 300px;
   height: 100vh;
   display: flex;
   background-repeat: no-repeat;
@@ -27,7 +27,7 @@
   color: #fdfaf8;
   background: rgba(12, 46, 43, 0.9);
   width: 100%;
-  padding: 50px;
+  padding: 50px 50px 0px 50px;
   margin-bottom: 0;
 }
 .form > div > label {
@@ -95,4 +95,123 @@
 .eventName {
   color: #fdfaf8;
   background-color: rgba(12, 46, 43, 0.9);
+}
+
+
+@media (max-width: 1293px) {
+  .section {
+    padding: 50px 250px   ;
+  }
+}
+@media (max-width: 1193px) {
+  .section {
+    padding: 50px 200px;
+  }
+}
+@media (max-width: 1092px) {
+  .section {
+    padding: 0px 150px;
+  }
+  .form > div > input,
+.form > div > select,
+.form > div > textarea {
+  color: #ffffff;
+  background: transparent;
+  border: 1px solid #fdfaf8;
+  outline: none;
+  height: 2.5rem;
+  padding-left: 1rem;
+  font-size: 1.1rem;
+  border-radius: 5px;
+}
+.form > div > textarea {
+  height: 100px;
+  resize: none;
+}
+
+.button {
+  text-decoration: none;
+  color: #0c2e2b;
+  background: #fdfaf8;
+  width: 140px;
+  display: flex;
+  height: 35px;
+  align-items: center;
+  justify-content: center;
+  font-family: Cormorant Garamond;
+  font-size: 1.3rem;
+  cursor: pointer;
+  border: none;
+  transition: 0.5s ease-in-out;
+}
+}
+@media (max-width: 993px) {
+  .section {
+    padding: 0px 100px;
+  }
+}
+@media (max-width: 730px) {
+  .form{
+    width: 80% ;
+    padding: 30px 50px 20px 50px;
+  }
+  .h1{
+    width: 80%;
+    padding: 30px  50px 0 50px;
+    font-size: 30px;
+  }
+form > div {
+  flex-direction: column;
+  gap: 0px !important;
+  width: 100% !important;
+}
+}
+
+@media (max-width: 655px) {
+  .section {
+    padding: 20px 50px ;
+    width: fit-content;
+  }
+  .section {
+    height: 100vh;
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 550px) {
+  .section {
+    padding: 0px 30px;
+
+  }
+}
+@media (max-width: 550px) {
+  .h1 {
+font-size: 25px;
+  }
+}
+@media (max-width: 407px) {
+  .section {
+width: auto;
+padding: 0px;
+background-image:none !important;
+  
+}
+  .h1{
+background:#0c2e2b;
+    width: auto;
+  }
+  .form{
+    width: -webkit-fill-available;
+    background: #0c2e2b;
+    padding-inline: 20px;
+  }
+  
 }

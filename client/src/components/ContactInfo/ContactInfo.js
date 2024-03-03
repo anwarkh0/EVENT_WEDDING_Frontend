@@ -4,7 +4,7 @@ function ContactInfo() {
   return (
     <section className={Style.section}
     >
-      <h1>LOCATION</h1>
+      <h1 className={Style.h1}>LOCATION</h1>
       <div className={Style.container}>
         <div className={Style.div}>
           <span className={Style.span1}>

@@ -58,7 +58,35 @@
   margin-inline: 20px;
   height: 386px;
   display: flex;
-  align-items: center;
   color: #fdfaf8;
+  justify-content: center;
+  flex-direction: column;
 
+}
+@media (max-width:1629px) {
+  .rachwan{
+    width: 320px;
+    height: 540px;
+  }
+  .nameEvent{
+    margin: 45px 0 0 0;
+
+  }
+  .infoEvent {
+    bottom: -420px;
+  }
+}
+@media (max-width:1629px) {
+  .rachwan{
+    width: 320px;
+    height: 540px;
+  }
+  .nameEvent{
+    margin: 45px 0 0 0;
+    font-size: 25px;
+
+  }
+  .infoEvent {
+    bottom: -420px;
+  }
 }
