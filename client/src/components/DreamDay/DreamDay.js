@@ -1,16 +1,18 @@
-import image from '../../assets/wedding/pexels-agung-pandit-wiguna-2788488.jpg'
+import image1 from '../../assets/image/200.png'
+import image2 from '../../assets/image/images.png'
+import image3 from '../../assets/image/995646-200.png'
 import Style from './DreamDay.module.css'
 import { motion } from 'framer-motion';
 
 function DreamDay() {
     return (
         <section className={Style.section}>
-            <h1>WHY CHOOSE DREAMDAY</h1>
+            <h1>Why Choose Oakwood Events & Catering</h1>
             <div className={Style.articles}>
 
                 <article className={Style.article}>
                     <div className={Style.div}
-                        style={{ backgroundImage: `url(${image})` }}>
+                        style={{ backgroundImage: `url(${image1})` }}>
                     </div>
                     <h2 className={Style.h2}>Experience & Expertise</h2>
                     <p className={Style.p}>
@@ -21,20 +23,16 @@ function DreamDay() {
                 </article>
                 <article className={Style.article}>
                     <div className={Style.div}
-                        style={{ backgroundImage: `url(${image})` }}
+                        style={{ backgroundImage: `url(${image2})` }}
                     >
                     </div>
                     <h2 className={Style.h2}>Quality & Freshness</h2>
                     <p className={Style.p}>
-                        We source only the finest ingredients,
-                        ensuring that every dish is crafted with
-                        care and attention to detail.
-
-                    </p>
+                    At our establishment, we meticulously source only the finest ingredients, ensuring quality and freshness in every dish crafted with care and attention to detail.                    </p>
                 </article>
                 <article className={Style.article}>
                     <div className={Style.div}
-                        style={{ backgroundImage: `url(${image})` }}>
+                        style={{ backgroundImage: `url(${image3})` }}>
                     </div>
                     <h2 className={Style.h2}>Personalized Approach</h2>
                     <p className={Style.p}>

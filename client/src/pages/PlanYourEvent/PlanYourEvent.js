@@ -1,31 +1,19 @@
 import React from 'react'
 import HeroSection from '../../components/HeroSection/HeroSection'
 import DescrituonForPage from '../../components/decriptionForPage/DescrituonForPage'
-import eventImage from '../../assets/wedding/pexels-agung-pandit-wiguna-2788488.jpg'
+import eventImage from '../../assets/wedding/pexels-trung-nguyen-1578873.jpg'
 import EventBookingForm from '../../components/PlanYourEvent/EventBookingForm'
 function PlanYourEvent() {
   return (
     <>
       <HeroSection
         image={eventImage}
-        title="OUR CATERING SERVICES"
+        title=""
       />
       <DescrituonForPage
-        title="No. 1 Catering Company in Dubai"
-        paragrapg1="To be a food catering company that provides the best
-      catering services in Dubai takes a lot more than just
-      the fundamentals.
-      Bouffant Catering has worked its way up among the
-      leading catering companies steadily and consistently
-      through its “Passion to Serve”."
-        paragrapg2="    We, today have the finest catering services in Dubai, Shariah,
-      Ajman or any other Emirate in the UAE can offer.
-      Why? Because our services stretch beyond just food.
-      Our food catering company and its services incorporate planning of bespoke menus,
-      managing the supplies, facilitating the vendors,
-      organizing the waitstaff as well as other substantial workforce,
-      and lastly executing an event which is cherished by the hosts as well the guests.
-      Our passion for culinary arts makes puts us among the best catering companies in UAE."
+        title="Tailor-Made Experiences for Every Occasion"
+        paragrapg1="At Oakwood Events & Catering, we understand that every celebration is unique. While we offer a range of carefully curated packages designed to suit various tastes and preferences, we also recognize that your vision may require a more personalized touch. That's why we provide the flexibility for you to customize your own event."
+        paragrapg2="adjusting menu selections, incorporating specific themes, or adding bespoke elements to your décor, our dedicated team is here to bring your vision to life. With our commitment to excellence and attention to detail, we ensure that your event is exactly as you imagine it. Let us help you create a one-of-a-kind experience that exceeds your expectations and leaves a lasting impression on you and your guests."
         image=""
       />
       <EventBookingForm />

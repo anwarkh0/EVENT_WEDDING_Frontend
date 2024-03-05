@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { motion } from "framer-motion";
+import emailjs from '@emailjs/browser';
+
 function OurPackages() {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -13,15 +15,37 @@ function OurPackages() {
     budget: "",
     packageName: "",
   });
-
+  const [openNote, setOpenNote] = useState({
+    open: false,
+    message: ''
+  })
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+    emailjs
+      .sendForm('service_99wpm17', 'template_iblcpks', e.target, {
+        publicKey: 'eZbgPNjsgg-BVG94A',
+      })
+      .then(
+        () => {
+          setOpenNote({
+            open: true,
+            message: 'Email was successfully sent!!'
+          });
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          setOpenNote({
+            open: true,
+            message: 'Email not sent please try agian'
+          });
+        },
+      );
   };
   const { id } = useParams();
   const [data, setData] = useState(null);
@@ -43,11 +67,10 @@ function OurPackages() {
 
     fetchData();
   }, [id]);
-  console.log("das", data);
   return (
     <section className={Style.section}>
-      <h1>Our Most Popular {data&&data.name} Packages</h1>
-      {data&&data.packageId &&
+      <h1>Our Most Popular {data && data.name} Packages</h1>
+      {data && data.packageId &&
         data.packageId.map((item) => (
           <article className={Style.article} key={item._id}>
             <img
@@ -95,9 +118,9 @@ function OurPackages() {
                   setIsOpen(false);
                 }}
               >
-                <p className={Style.form_Title}>
+                <h1 className={Style.form_Title}>
                   Book Package
-                </p>
+                </h1>
                 <button className={Style.xbtn} onClick={() => setIsOpen(false)}>
                   X
                 </button>
@@ -166,7 +189,7 @@ function OurPackages() {
                   value={formData.packageName}
                   onChange={handleChange}
                   required
-                  disabled
+                  // disabled
                 />
               </div>
               <div className={Style.bookingDate}>
@@ -175,7 +198,7 @@ function OurPackages() {
                     setIsOpen(false);
                   }}
                   type="submit"
-                  className={Style.button}
+                  className={Style.SendButton}
                 >
                   Sent
                 </button>
@@ -184,7 +207,24 @@ function OurPackages() {
           </motion.div>
         )
       }
-      <h1></h1>
+      {openNote.open && (
+        <div className={Style.backgrounds}>
+
+          <motion.div className={Style.email}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}>
+            <h1>{openNote.message}{/* Email was successfully sent!! */}</h1>
+            <button className={Style.okButton} onClick={() => setOpenNote({
+              open: false,
+              message: ""
+            })}>
+              OK
+            </button>
+          </motion.div>
+        </div>
+      )}
     </section >
   );
 }

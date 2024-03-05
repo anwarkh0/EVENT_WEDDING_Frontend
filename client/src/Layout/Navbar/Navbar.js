@@ -4,6 +4,7 @@ import Instagram from '../../assets/svgComponent/Instagram'
 import Style from './Navbar.module.css'
 import { Link, NavLink } from 'react-router-dom'
 import logo from '../../assets/image/Logos_for_t04-06.svg'
+import Sidebar from '../Sidebar/Sidebar'
 function Navbar() {
     const activeStyles = {
         borderBottom: "#f5e8e0 2px groove",
@@ -25,16 +26,17 @@ function Navbar() {
                     </NavLink>
                 </li>
                 <li>
+
                     <NavLink
-                        to='/service'
+                        to='/about-us'
                         style={({ isActive }) => isActive ? activeStyles : null}
                     >
-                        Services
+                        About Us
                     </NavLink>
                 </li>
                 <li>
                     <NavLink
-                        to='/plan-tour-event'
+                        to='/plan-your-event'
                         style={({ isActive }) => isActive ? activeStyles : null}
                     >
                         Plan Your Event
@@ -42,7 +44,7 @@ function Navbar() {
                 </li>
                 <li>
                     <NavLink
-                        to='/contact'
+                        to='/contact-us'
                         style={({ isActive }) => isActive ? activeStyles : null}
                     >
                         Contact Us
@@ -50,21 +52,22 @@ function Navbar() {
                 </li>
                 <li>
                     <NavLink
-                        to='/about'
+                        to='/packages'
                         style={({ isActive }) => isActive ? activeStyles : null}
                     >
-                        About Us
+                        Packages
                     </NavLink>
                 </li>
             </ul>
+                    <Sidebar />
             <ul className={Style.socialMedia}>
                 <li>
-                    <Facebook />
-                    Facebook
+                    {/* <Facebook /> */}
+                    {/* Facebook */}
                 </li>
                 <li>
-                    <Instagram />
-                    Instagram
+                    {/* <Instagram /> */}
+                    {/* Instagram */}
                 </li>
             </ul>
         </nav>

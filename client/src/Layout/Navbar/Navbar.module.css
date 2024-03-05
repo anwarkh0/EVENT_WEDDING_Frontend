@@ -39,13 +39,9 @@
   color: #a2783a;
   font-weight: 600;
   color: #f5e8e0;
-
-  /*  */
-
   padding: 0 10px;
   position: relative;
   transition: 0.2s;
-  /*  */
 }
 .nav > .ul > li > a::after {
   content: "";
@@ -77,6 +73,7 @@
   align-content: center;
   justify-content: center;
   gap: 10px;
+  color: #0c2e2b;
   flex-wrap: wrap;
 }
 .socialMedia > li {
@@ -85,10 +82,7 @@
   justify-content: flex-end;
   width: 100%;
 }
-.logo > h2 > a {
-  text-decoration: none;
-  color: #a2783a;
-}
+
 
 .socialMedia > li:first-child {
   column-gap: 0.75rem;
@@ -96,11 +90,6 @@
 @media (max-width: 1096px) {
   .ul {
     display: none !important;
-    overflow: hidden;
-  }
-
-  .socialMedia {
-    display: none;
     overflow: hidden;
   }
 

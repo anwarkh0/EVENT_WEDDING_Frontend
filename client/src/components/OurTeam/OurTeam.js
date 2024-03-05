@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
-
+import team1 from '../../assets/image/images.jpeg'
+import team2 from '../../assets/image/images (1).jpeg'
+import team3 from '../../assets/image/images (2).jpeg'
 
 import Style from './OurTeam.module.css'
-import eventImage from '../../assets/wedding/homepage.jpg'
 
 
 function OurTeam() {
@@ -13,20 +14,20 @@ function OurTeam() {
             </div>
             <div className={Style.threeEvent} >
                 <div className={Style.rachwan}
-                    style={{ backgroundImage: `url(${eventImage})` }}>
+                    style={{ backgroundImage: `url(${team1})` }}>
                     <div className={Style.infoEvent}>
-                        <h1 className={Style.nameEvent}>team member</h1>
+                        <h1 className={Style.nameEvent}>Event Manager</h1>
                     </div>
                 </div>
                 <div className={Style.rachwan}
-                    style={{ backgroundImage: `url(${eventImage})` }}>
+                    style={{ backgroundImage: `url(${team2})` }}>
                     <div className={Style.infoEvent}>
-                        <h1 className={Style.nameEvent}>team member</h1>
+                        <h1 className={Style.nameEvent}>Event Marketing</h1>
                     </div>
                 </div> <div className={Style.rachwan}
-                    style={{ backgroundImage: `url(${eventImage})` }}>
+                    style={{ backgroundImage: `url(${team3})` }}>
                     <div className={Style.infoEvent}>
-                        <h1 className={Style.nameEvent}>team member</h1>
+                        <h1 className={Style.nameEvent}>Event Designer</h1>
                     </div>
                 </div>
 

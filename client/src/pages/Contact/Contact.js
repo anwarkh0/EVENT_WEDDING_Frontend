@@ -1,6 +1,6 @@
 import React from 'react'
 import HeroSection from '../../components/HeroSection/HeroSection'
-import eventImage from '../../assets/wedding/pexels-agung-pandit-wiguna-2788488.jpg'
+import eventImage from '../../assets/wedding/couver.jpg'
 import DescrituonForPage from '../../components/decriptionForPage/DescrituonForPage'
 import ContactForm from '../../components/contactUs/ContactUs'
 import ContactInfo from '../../components/ContactInfo/ContactInfo'
@@ -18,8 +18,7 @@ function Contact() {
         paragrapg1=" Contact us today to discuss your event
          needs and let us create an unforgettable experience
           together."
-        paragrapg2="Welcome to Oskwood Events & Catering, where every event is a masterpiece.
-        "
+        paragrapg2="Welcome to Oakwood Events & Catering, where every event is a masterpiece."
         image=""
       />
       <div className={Style.div}>

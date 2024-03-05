@@ -7,6 +7,7 @@
   margin-bottom: 50px;
   justify-content: space-between;
   align-items: center;
+  gap: 50px;
 }
 .isRiverce {
   display: flex;
@@ -17,11 +18,10 @@
 }
 .img {
   width: 45%;
-  height: 780px;
+  height: 700px;
 }
 .aside {
   width: 50%;
-  
 }
 .p {
   font-size: 1.6rem;
@@ -59,7 +59,7 @@
 .button {
   text-decoration: none;
   color: #fdfaf8;
-  background:#0c2e2b;
+  background: #0c2e2b;
   width: 180px;
   display: flex;
   height: 50px;
@@ -71,8 +71,8 @@
   border: none;
   transition: 0.5s ease-in-out;
 }
-.button:hover{
-  background:  #1a1a1a ;
+.button:hover {
+  background: #1a1a1a;
   color: #fdfaf8;
 }
 .background {
@@ -85,6 +85,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 }
 .form {
   display: flex;
@@ -94,11 +95,10 @@
   width: 30%;
   justify-content: space-between;
   align-items: flex-end;
-  background:black;
+  background: #0c2e2b;
   padding: 50px;
   align-items: center;
-  height: fit-content;
-  transition:all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .form > div {
   display: flex;
@@ -107,15 +107,15 @@
   width: 90%;
 }
 .form > div > label {
-  color: #a2783a;
+  color: #fdfaf8;
   font-size: 1.2rem;
   font-family: sans-serif;
 }
 
 .form > div > input {
-  color: #ffffff;
-  background: transparent;
-  border: 1px solid #a2783a;
+  color: #1a1a1a;
+  background: #fdfaf8;
+  border: none;
   outline: none;
   height: 3rem;
   padding-left: 1rem;
@@ -132,13 +132,13 @@ button {
   width: 100% !important;
   align-items: flex-end;
 }
-.span{
+.span {
   display: flex;
   width: 90%;
   justify-content: space-between;
   align-items: center;
 }
-.xbtn{
+.xbtn {
   background-color: transparent;
   color: white;
   border: none;
@@ -150,11 +150,174 @@ button {
   font-size: 1.5rem;
 }
 
-.xbtn:hover{
-  background-color:#a2783a;
+.xbtn:hover {
+  background-color: #0c2e2b;
 }
-.form_Title{
+.form_Title {
   font-size: 1.6rem;
   font-weight: 500;
   color: white;
+}
+.bookingDate {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.SendButton {
+  text-decoration: none;
+  background: #fdfaf8;
+  color: #0c2e2b;
+  width: 180px;
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  font-family: Cormorant Garamond;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+  transition: 0.5s ease-in-out;
+}
+.SendButton:hover {
+  color: #1a1a1a;
+  background: #fdfaf8;
+}
+.email {
+  border-radius: 5px;
+  border-top: #fdfaf8 4px solid;
+  width: 60%;
+  height: 40%;
+  background: #0c2e2b;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.email > h1 {
+  color: #f5e8e0;
+  font-size: 2rem;
+}
+.backgrounds {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.okButton {
+  text-decoration: none;
+  color: #0c2e2b;
+  background: #fdfaf8;
+  width: 180px;
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  font-family: Cormorant Garamond;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+  transition: 0.5s ease-in-out;
+}
+.okButton:hover {
+  background: #f5e8e0;
+  color: #0c2e2b;
+}
+@media (max-width: 1369px) {
+  .h1 {
+    font-size: 2rem;
+  }
+  .p {
+    font-size: 22px;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 300px;
+    overflow: hidden;
+    color: #1a1a1a;
+    margin-block: 100px;
+  }
+}
+@media (max-width: 1293px) {
+  .section {
+    padding: 0px 250px;
+    margin-block: 100px;
+  }
+}
+@media (max-width: 1193px) {
+  .section {
+    padding: 0px 200px;
+    margin-block: 100px;
+  }
+}
+@media (max-width: 1092px) {
+  .section {
+    padding: 0px 150px;
+  }
+}
+@media (max-width: 993px) {
+  .section {
+    padding: 0px 100px;
+  }
+  .img {
+    width: 50%;
+    height: 700px;
+  }
+}
+@media (max-width: 892px) {
+  .h1 {
+    font-size: 2rem;
+    width: 60%;
+  }
+}
+@media (max-width: 850px) {
+  .img {
+    width: 55%;
+    height: 700px;
+  }
+}
+@media (max-width: 808px) {
+  .h1 {
+    font-size: 2rem;
+    width: 80%;
+  }
+}
+
+@media (max-width: 740px) {
+}
+@media (max-width: 655px) {
+  .section {
+    padding: 0px 50px;
+    margin-block: 100px;
+  }
+}
+@media (max-width: 625px) {
+  .h1 {
+    font-size: 1.7rem;
+    width: 100%;
+  }
+
+  .p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 550px) {
+  .section {
+    padding: 0px 30px;
+
+    margin-block: 100px;
+  }
 }

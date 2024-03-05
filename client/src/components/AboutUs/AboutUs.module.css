@@ -1,11 +1,75 @@
-.section{
-    padding: 50px 300px;
+.section {
+  padding: 50px 300px;
 }
 .p {
-    font-family: sans-serif;
-    font-size: 20px;
-    font-weight: 200;
-    margin: 0;
-    line-height: 1.4em;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 200;
+  margin: 0;
+  line-height: 1.4em;
+}
+
+@media (max-width: 1369px) {
+  .h1 {
+    font-size: 2rem;
   }
-  
+  .p {
+    font-size: 22px;
+  }
+}
+@media (max-width: 1293px) {
+  .section {
+    padding: 0px 250px;
+  }
+}
+@media (max-width: 1193px) {
+  .section {
+    padding: 0px 200px;
+  }
+}
+@media (max-width: 1092px) {
+  .section {
+    padding: 0px 150px;
+  }
+}
+@media (max-width: 993px) {
+  .section {
+    padding: 0px 100px;
+  }
+}
+@media (max-width: 892px) {
+  .h1 {
+    font-size: 2rem;
+    width: 60%;
+  }
+}
+@media (max-width: 808px) {
+  .h1 {
+    font-size: 2rem;
+    width: 80%;
+  }
+}
+
+@media (max-width: 740px) {
+}
+@media (max-width: 655px) {
+  .section {
+    padding: 0px 50px;
+  }
+}
+@media (max-width: 625px) {
+  .h1 {
+    font-size: 1.7rem;
+    width: 100%;
+  }
+
+  .p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 550px) {
+  .section {
+    padding: 0px 30px;
+  }
+}

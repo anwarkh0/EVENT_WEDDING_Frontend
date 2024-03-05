@@ -13,7 +13,6 @@ function MultiSelectList({ setSelectedServices, selectedServices, services }) {
 
         setSelectedServices(newselectedServices);
     };
-
     return (
         <div className={Style.allservices}>
             <div>
@@ -26,6 +25,7 @@ function MultiSelectList({ setSelectedServices, selectedServices, services }) {
                                 key={service._id}
                                 type="checkbox"
                                 id={service._id}
+                                name='selectedServices'
                                 value={service.name}
                                 checked={selectedServices.includes(`${service.name}`)}
                                 onChange={() => handleOptionChange(`${service.name}`)}

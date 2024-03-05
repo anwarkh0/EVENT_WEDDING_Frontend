@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Style from './PlanYourEvent.module.css'
 import { motion } from 'framer-motion';
-import eventImage from '../../assets/wedding/couver.jpg'
+import eventImage from '../../assets/wedding/planyourevent.jpg'
 import MultiSelectList from '../MultiSelectionLIst/MultiSelectList';
 import axios from 'axios';
 function EventBookingForm() {
@@ -13,10 +13,8 @@ function EventBookingForm() {
         email: '',
         phone: '',
         eventType: '',
-        services: selectedServices,
         description: ''
     });
-
     useEffect(() => {
         const fetchEvents = async () => {
             try {
@@ -64,7 +62,7 @@ function EventBookingForm() {
             description: ''
         })
     }
-    console.log("dada", data)
+    // console.log("dada", data)
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("Form submitted:", formData);
@@ -126,12 +124,18 @@ function EventBookingForm() {
 
                     <label htmlFor="description">Description:</label>
                     <textarea id="description" name="description" value={formData.description} onChange={handleFormDataChange} rows="4" required></textarea>
+                    <span>We will get back to you with a meeting date within 1 working day  </span>
                 </div>
                 <div className={Style.btn}>
 
                     <button type="submit" className={Style.button} /* onClick={handleSubmit} */>Send</button>
                 </div>
             </form>
+            {/* <p style={{fontSize:"64px"}}>
+                {
+                    // formData.name + " services " + selectedServices
+                }
+            </p> */}
         </section>
     );
 }

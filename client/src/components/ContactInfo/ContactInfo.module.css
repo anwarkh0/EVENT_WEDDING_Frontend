@@ -8,7 +8,6 @@
   justify-content: space-between;
   width: 100%;
   gap: 50px;
-  flex-wrap: wrap;
   justify-content: center;
 }
 .div {
@@ -37,6 +36,17 @@
   font-size: 1.4rem;
   color: #fdfaf8;
 }
+@media (max-width: 1629px) {
+
+  .container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+}
 
 @media (max-width: 1369px) {
   .h1 {
@@ -45,6 +55,14 @@
   .p {
     font-size: 22px;
   }
+  .container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 }
 @media (max-width: 1293px) {
   .section {

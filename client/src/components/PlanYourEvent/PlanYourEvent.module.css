@@ -62,7 +62,9 @@
 .fieldDesc {
   width: 100% !important;
 }
-
+.fieldDesc>span {
+color: #f5e8e0;
+}
 .form > div > textarea {
   height: 150px;
   resize: none;

@@ -8,7 +8,7 @@ function OurPackagesPage() {
 <>
 <HeroSection
         image={eventImage}
-        title="OUR CATERING SERVICES"
+        title="OUR PACKAGES"
       />
 <OurPackages/>
 </>

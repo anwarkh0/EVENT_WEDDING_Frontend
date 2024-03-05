@@ -43,7 +43,7 @@ function Service() {
         image=""
       />
       <section className={Style.section}>
-        <h1 className={Style.h1}>title</h1>
+        <h1 className={Style.h1}> explor event</h1>
         <div className={Style.div}>
           {data && data.map((item) => (
             <Event

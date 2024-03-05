@@ -4,14 +4,14 @@ function ContactInfo() {
   return (
     <section className={Style.section}
     >
-      <h1 className={Style.h1}>LOCATION</h1>
+      <h1 className={Style.h1}></h1>
       <div className={Style.container}>
         <div className={Style.div}>
           <span className={Style.span1}>
             Address
           </span>
           <span className={Style.span2}>
-            Any where, any city, 445533
+            Tripoli AL-Mina
           </span>
         </div>
         <div className={Style.div}>
@@ -19,7 +19,7 @@ function ContactInfo() {
             Call Us
           </span>
           <span className={Style.span2}>
-            Call Us: +961********
+             +961********
           </span>
         </div>
         <div className={Style.div}>
